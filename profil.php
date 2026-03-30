@@ -5,7 +5,6 @@ $email = "hela.farhat@email.com";
 $age =20;
 $ville ="Tunis";
 $formation = "GTIC";
-$tab=
 ?>
 <!DOCTYPE html>
 <html lang="fr">
