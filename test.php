@@ -77,5 +77,9 @@ $formations = [
 foreach ($formations as $f) {
     echo "Formation : " . $f["nom"] . " - Durée : " . $f["duree"] . "\n";
 }
+function message($msg) {
+echo " $msg!";
+}
+message("bonjour"); // Affiche "Bonjour!”
 
 ?>
