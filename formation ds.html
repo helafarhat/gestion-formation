@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science - FormaPro</title>
+    <title>Data Science — FormaPro</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="stylee.css">
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">FormaPro</a>
+            <a href="index.html" class="logo">Forma<span>Pro</span></a>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="index.html#formations">Formations</a></li>
-                <li><a href="insecription.html">S'inscrire</a></li>
+                <li><a href="inscription.html" class="btn-nav">S'inscrire</a></li>
             </ul>
         </div>
     </nav>
@@ -27,11 +28,11 @@
                 Data Science
             </p>
             <h1>📊 Data Science</h1>
-            <p>Apprenez à collecter, analyser et visualiser des données massives. Transformez des données brutes en informations utiles pour la prise de décision.</p>
+            <p class="page-hero-desc">Apprenez à collecter, analyser et visualiser des données massives. Transformez des données brutes en informations utiles pour la prise de décision.</p>
             <div class="meta-tags">
                 <span class="meta-tag">⏱ 100 heures</span>
                 <span class="meta-tag">📅 2.5 mois</span>
-                <span class="meta-tag">🎓 Niveau débutant</span>
+                <span class="meta-tag">🎓 Débutant</span>
                 <span class="meta-tag">💻 En ligne</span>
                 <span class="meta-tag">📜 Certificat inclus</span>
             </div>
@@ -47,9 +48,9 @@
                 <ul class="objectives">
                     <li>Collecter et nettoyer des données provenant de sources variées</li>
                     <li>Réaliser des analyses exploratoires et identifier des tendances</li>
-                    <li>Maîtriser les outils Python de data science : Pandas, NumPy, Matplotlib</li>
+                    <li>Maîtriser Python, Pandas, NumPy et Matplotlib</li>
                     <li>Construire des tableaux de bord interactifs avec Power BI</li>
-                    <li>Appliquer des techniques statistiques et des tests d'hypothèses</li>
+                    <li>Appliquer des tests statistiques et analyses d'hypothèses</li>
                     <li>Communiquer efficacement des résultats à des non-spécialistes</li>
                 </ul>
             </section>
@@ -58,58 +59,20 @@
                 <h2>Programme — Modules</h2>
                 <table class="modules-table">
                     <thead>
-                        <tr>
-                            <th>Module</th>
-                            <th>Contenu</th>
-                            <th>Durée</th>
-                        </tr>
+                        <tr><th>Module</th><th>Contenu</th><th>Durée</th></tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>M1</td>
-                            <td>Introduction à la Data Science — cycle de vie d'un projet, outils, environnement</td>
-                            <td>6h</td>
-                        </tr>
-                        <tr>
-                            <td>M2</td>
-                            <td>Python & bibliothèques data — NumPy, Pandas, manipulation de DataFrames</td>
-                            <td>18h</td>
-                        </tr>
-                        <tr>
-                            <td>M3</td>
-                            <td>Collecte & nettoyage des données — web scraping, APIs, valeurs manquantes</td>
-                            <td>14h</td>
-                        </tr>
-                        <tr>
-                            <td>M4</td>
-                            <td>Analyse exploratoire (EDA) — statistiques descriptives, corrélations, distributions</td>
-                            <td>14h</td>
-                        </tr>
-                        <tr>
-                            <td>M5</td>
-                            <td>Visualisation des données — Matplotlib, Seaborn, graphiques interactifs Plotly</td>
-                            <td>12h</td>
-                        </tr>
-                        <tr>
-                            <td>M6</td>
-                            <td>Statistiques & tests d'hypothèses — inférence statistique, ANOVA, tests A/B</td>
-                            <td>16h</td>
-                        </tr>
-                        <tr>
-                            <td>M7</td>
-                            <td>Tableaux de bord & reporting — Power BI, storytelling avec les données</td>
-                            <td>12h</td>
-                        </tr>
-                        <tr>
-                            <td>M8</td>
-                            <td>Projet final — analyse complète d'un dataset réel, rapport et présentation</td>
-                            <td>8h</td>
-                        </tr>
+                        <tr><td>M1</td><td>Introduction à la Data Science — cycle de vie, outils, environnement Jupyter</td><td>6h</td></tr>
+                        <tr><td>M2</td><td>Python & bibliothèques — NumPy, Pandas, manipulation de DataFrames</td><td>18h</td></tr>
+                        <tr><td>M3</td><td>Collecte & nettoyage — web scraping, APIs, valeurs manquantes, outliers</td><td>14h</td></tr>
+                        <tr><td>M4</td><td>Analyse exploratoire (EDA) — statistiques descriptives, corrélations</td><td>14h</td></tr>
+                        <tr><td>M5</td><td>Visualisation — Matplotlib, Seaborn, graphiques interactifs avec Plotly</td><td>12h</td></tr>
+                        <tr><td>M6</td><td>Statistiques & tests d'hypothèses — inférence, ANOVA, tests A/B</td><td>16h</td></tr>
+                        <tr><td>M7</td><td>Tableaux de bord — Power BI, Plotly Dash, storytelling avec les données</td><td>12h</td></tr>
+                        <tr><td>M8</td><td>Projet final — analyse complète d'un dataset réel, rapport et présentation</td><td>8h</td></tr>
                     </tbody>
                 </table>
             </section>
-
-
 
         </div>
 
@@ -136,8 +99,8 @@
             </div>
 
             <div class="enroll-card">
-                <p>Formation gratuite, financée dans le cadre du programme national de formation numérique.</p>
-                <a href="insecription.html" class="btn-white">S'inscrire à cette formation</a>
+                <p>Formation gratuite dans le cadre du programme national de formation numérique.</p>
+                <a href="inscription.html" class="btn-white">S'inscrire à cette formation</a>
             </div>
 
         </aside>

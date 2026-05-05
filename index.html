@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormaPro - Plateforme de Gestion des Formations</title>
+    <title>FormaPro — Plateforme de Gestion des Formations</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="stylee.css">
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">FormaPro</a>
+            <a href="index.html" class="logo">Forma<span>Pro</span></a>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html" class="nav-active">Accueil</a></li>
                 <li><a href="#formations">Formations</a></li>
-                <li><a href="insecription.html">S'inscrire</a></li>
+                <li><a href="inscription.html" class="btn-nav">S'inscrire</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>Plateforme de Gestion des Formations</h1>
-        <p>Développez vos compétences numériques avec nos formations professionnelles certifiantes.</p>
-        <a href="#formations" class="btn">Voir les formations</a>
+        <span class="hero-tag">Formations professionnelles certifiantes</span>
+        <h1>Développez vos compétences<br>numériques</h1>
+        <p>Des formations conçues avec des experts de l'industrie pour vous préparer aux métiers du numérique. Apprenez à votre rythme, obtenez un certificat reconnu.</p>
+        <div class="hero-actions">
+            <a href="#formations" class="btn-hero">Voir les formations</a>
+            <a href="inscription.html" class="btn-hero-outline">S'inscrire</a>
+        </div>
     </header>
 
     <section class="stats">
         <div class="stats-container">
             <div class="stat">
-                <h2>2400+</h2>
-                <p>Apprenants</p>
-            </div>
-            <div class="stat">
-                <h2>6</h2>
-                <p>Formations</p>
-            </div>
-            <div class="stat">
-                <h2>99%</h2>
-                <p>Satisfaction</p>
+                <h2>1 200+</h2>
+                <p>Apprenants actifs</p>
             </div>
             <div class="stat">
                 <h2>24</h2>
-                <p>Instructeurs</p>
+                <p>Formations disponibles</p>
+            </div>
+            <div class="stat">
+                <h2>99%</h2>
+                <p>Taux de satisfaction</p>
+            </div>
+            <div class="stat">
+                <h2>24</h2>
+                <p>Instructeurs experts</p>
             </div>
         </div>
     </section>
 
     <section id="formations" class="formations-section">
-        <h2 class="section-title">Nos Formations</h2>
-        <p class="section-sub">Choisissez la formation qui correspond à vos objectifs professionnels.</p>
+        <span class="section-tag">Nos programmes</span>
+        <div class="section-header">
+            <h2>Choisissez votre formation</h2>
+            <p class="section-sub">Des parcours pensés pour vous préparer aux métiers les plus recherchés du numérique.</p>
+        </div>
 
         <div class="cards-grid">
 
@@ -58,51 +66,51 @@
                     <span class="badge">Intermédiaire</span>
                 </div>
                 <h3>Intelligence Artificielle</h3>
-                <p>Machine learning, réseaux de neurones, TensorFlow et déploiement de modèles IA.</p>
+                <p>Machine learning, réseaux de neurones, TensorFlow et déploiement de modèles IA en production.</p>
                 <ul>
-                    <li>⏱ Durée : 3 mois — 120 heures</li>
-                    <li>🌐 Format : Hybride</li>
+                    <li>⏱ 3 mois — 120 heures</li>
+                    <li>🌐 Format hybride</li>
                     <li>📜 Certificat inclus</li>
                 </ul>
                 <div class="card-btns">
                     <a href="formation ai.html" class="btn-outline">Programme</a>
-                    <a href="insecription.html" class="btn">S'inscrire</a>
+                    <a href="inscription.html" class="btn">S'inscrire</a>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-top">
                     <span class="card-icon">📊</span>
-                    <span class="badge">Débutant</span>
+                    <span class="badge debutant">Débutant</span>
                 </div>
                 <h3>Data Science</h3>
                 <p>Analyse et visualisation de données avec Python, Pandas, Matplotlib et Power BI.</p>
                 <ul>
-                    <li>⏱ Durée : 2.5 mois — 100 heures</li>
-                    <li>💻 Format : En ligne</li>
+                    <li>⏱ 2.5 mois — 100 heures</li>
+                    <li>💻 100% en ligne</li>
                     <li>📜 Certificat inclus</li>
                 </ul>
                 <div class="card-btns">
-                    <a href="formaton ds.html" class="btn-outline">Programme</a>
-                    <a href="insecription.html" class="btn">S'inscrire</a>
+                    <a href="formation ds.html" class="btn-outline">Programme</a>
+                    <a href="inscription.html" class="btn">S'inscrire</a>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-top">
                     <span class="card-icon">🔐</span>
-                    <span class="badge">Avancé</span>
+                    <span class="badge avance">Avancé</span>
                 </div>
                 <h3>Cybersécurité</h3>
-                <p>Sécurité réseau, tests de pénétration, analyse forensique et gestion des incidents.</p>
+                <p>Sécurité réseau, tests de pénétration, forensique et gestion des incidents de sécurité.</p>
                 <ul>
-                    <li>⏱ Durée : 4 mois — 140 heures</li>
-                    <li>🏛 Format : Présentiel</li>
+                    <li>⏱ 4 mois — 140 heures</li>
+                    <li>🏛 Présentiel (labo)</li>
                     <li>📜 Certificat inclus</li>
                 </ul>
                 <div class="card-btns">
                     <a href="formation cyber.html" class="btn-outline">Programme</a>
-                    <a href="insecription.html" class="btn">S'inscrire</a>
+                    <a href="inscription.html" class="btn">S'inscrire</a>
                 </div>
             </div>
 
@@ -112,10 +120,10 @@
                     <span class="badge">Intermédiaire</span>
                 </div>
                 <h3>Cloud Computing</h3>
-                <p>Déploiement d'infrastructures cloud sur AWS, Azure et Google Cloud avec Docker.</p>
+                <p>Infrastructure cloud sur AWS, Azure et Google Cloud. Docker, Kubernetes et DevOps.</p>
                 <ul>
-                    <li>⏱ Durée : 2 mois — 80 heures</li>
-                    <li>💻 Format : En ligne</li>
+                    <li>⏱ 2 mois — 80 heures</li>
+                    <li>💻 100% en ligne</li>
                     <li>📜 Certificat inclus</li>
                 </ul>
                 <div class="card-btns">
@@ -127,18 +135,18 @@
             <div class="card">
                 <div class="card-top">
                     <span class="card-icon">🌐</span>
-                    <span class="badge">Débutant</span>
+                    <span class="badge debutant">Débutant</span>
                 </div>
                 <h3>Développement Web</h3>
-                <p>HTML, CSS, JavaScript, React et Node.js — du front-end au back-end.</p>
+                <p>HTML, CSS, JavaScript, React et Node.js. Du front-end au back-end, une formation complète.</p>
                 <ul>
-                    <li>⏱ Durée : 4 mois — 160 heures</li>
-                    <li>🔄 Format : Hybride</li>
+                    <li>⏱ 4 mois — 160 heures</li>
+                    <li>🔄 Format hybride</li>
                     <li>📜 Certificat inclus</li>
                 </ul>
                 <div class="card-btns">
-                    <a href="insecription.html" class="btn-outline">Programme</a>
-                    <a href="insecription.html" class="btn">S'inscrire</a>
+                    <a href="inscription.html" class="btn-outline">Programme</a>
+                    <a href="inscription.html" class="btn">S'inscrire</a>
                 </div>
             </div>
 
@@ -148,19 +156,25 @@
                     <span class="badge">Intermédiaire</span>
                 </div>
                 <h3>Développement Mobile</h3>
-                <p>Création d'applications iOS et Android avec React Native et Flutter.</p>
+                <p>Création d'applications iOS et Android avec React Native et Flutter. UX/UI incluse.</p>
                 <ul>
-                    <li>⏱ Durée : 3 mois — 120 heures</li>
-                    <li>💻 Format : En ligne</li>
+                    <li>⏱ 3 mois — 120 heures</li>
+                    <li>💻 100% en ligne</li>
                     <li>📜 Certificat inclus</li>
                 </ul>
                 <div class="card-btns">
-                    <a href="insecription.html" class="btn-outline">Programme</a>
-                    <a href="insecription.html" class="btn">S'inscrire</a>
+                    <a href="inscription.html" class="btn-outline">Programme</a>
+                    <a href="inscription.html" class="btn">S'inscrire</a>
                 </div>
             </div>
 
         </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Prêt à commencer votre parcours ?</h2>
+        <p>Rejoignez plus de 1 200 apprenants et transformez votre carrière dès aujourd'hui.</p>
+        <a href="inscription.html" class="btn">S'inscrire maintenant</a>
     </section>
 
     <footer>

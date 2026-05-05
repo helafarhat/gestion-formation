@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'inscription - FormaPro</title>
+    <title>Formulaire d'inscription — FormaPro</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="stylee.css">
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">FormaPro</a>
+            <a href="index.html" class="logo">Forma<span>Pro</span></a>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="index.html#formations">Formations</a></li>
-                <li><a href="insecription.html">S'inscrire</a></li>
+                <li><a href="inscription.html" class="nav-active btn-nav">S'inscrire</a></li>
             </ul>
         </div>
     </nav>
@@ -22,11 +23,11 @@
     <div class="form-page">
 
         <h1>Formulaire d'inscription</h1>
-        <p class="form-intro">Remplissez ce formulaire pour rejoindre la formation de votre choix.</p>
+        <p class="form-intro">Remplissez ce formulaire pour rejoindre la formation de votre choix. Notre équipe vous contactera dans les 48 heures.</p>
 
         <div class="form-card" id="form-card">
 
-            <form action="" method="post">
+            <form action="#" method="post">
 
                 <p class="form-section-title">Informations personnelles</p>
 
@@ -46,14 +47,28 @@
                     <input type="email" id="email" name="email" placeholder="Ex : hella.farhat@email.com" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="telephone">Numéro de téléphone <span class="req">*</span></label>
-                    <input type="tel" id="telephone" name="telephone" placeholder="Ex :  12 345 678" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telephone">Téléphone <span class="req">*</span></label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="+216 XX XXX XXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date de naissance</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="dob">Date de naissance</label>
-                    <input type="date" id="dob" name="dob">
+                    <label for="diplome">Diplôme le plus élevé obtenu</label>
+                    <select id="diplome" name="diplome">
+                        <option value="" disabled selected>-- Sélectionner --</option>
+                        <option>Baccalauréat</option>
+                        <option>Licence / Bachelor</option>
+                        <option>Master</option>
+                        <option>Ingénieur</option>
+                        <option>Doctorat</option>
+                        <option>Autre</option>
+                    </select>
                 </div>
 
                 <p class="form-section-title">Formation souhaitée</p>
@@ -61,7 +76,7 @@
                 <div class="form-group">
                     <label for="formation">Choisissez une formation <span class="req">*</span></label>
                     <select id="formation" name="formation" required>
-                        <option value="" disabled selected>Sélectionner une formation</option>
+                        <option value="" disabled selected>-- Sélectionner une formation --</option>
                         <option value="ia">Intelligence Artificielle</option>
                         <option value="ds">Data Science</option>
                         <option value="cyber">Cybersécurité</option>
@@ -74,18 +89,18 @@
                 <div class="form-group">
                     <label>Votre niveau actuel <span class="req">*</span></label>
                     <div class="radio-group">
-                        <label><input type="radio" name="niveau" value="debutant" required> Débutant</label>
-                        <label><input type="radio" name="niveau" value="intermediaire"> Intermédiaire</label>
-                        <label><input type="radio" name="niveau" value="avance"> Avancé</label>
+                        <label class="radio-label"><input type="radio" name="niveau" value="debutant" required> Débutant</label>
+                        <label class="radio-label"><input type="radio" name="niveau" value="intermediaire"> Intermédiaire</label>
+                        <label class="radio-label"><input type="radio" name="niveau" value="avance"> Avancé</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Format préféré</label>
                     <div class="radio-group">
-                        <label><input type="radio" name="format" value="presentiel"> Présentiel</label>
-                        <label><input type="radio" name="format" value="enligne"> En ligne</label>
-                        <label><input type="radio" name="format" value="hybride"> Hybride</label>
+                        <label class="radio-label"><input type="radio" name="format" value="presentiel"> Présentiel</label>
+                        <label class="radio-label"><input type="radio" name="format" value="enligne"> En ligne</label>
+                        <label class="radio-label"><input type="radio" name="format" value="hybride"> Hybride</label>
                     </div>
                 </div>
 
@@ -100,7 +115,7 @@
     </div>
 
     <footer>
-        <p>© 2025 FormaPro — Plateforme de Gestion des Formations</p>
+        <p>© 2025 FormaPro  Plateforme de Gestion des Formations </p>
     </footer>
 
 </body>
