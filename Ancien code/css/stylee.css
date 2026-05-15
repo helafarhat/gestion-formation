@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
-/* ===============================
-   FormaPro — Purple Professional
-   =============================== */
 
 :root {
     --purple-deep:  #2D1B69;
@@ -35,8 +32,6 @@ body {
 
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
-
-/* ===== NAVBAR ===== */
 
 nav {
     background-color: var(--purple-deep);
@@ -91,7 +86,7 @@ nav ul li a.btn-nav {
 
 nav ul li a.btn-nav:hover { background: var(--purple-light); color: var(--purple-deep); }
 
-/* ===== HERO ===== */
+
 
 .hero {
     background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple-main) 60%, var(--purple-mid) 100%);

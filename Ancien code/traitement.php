@@ -25,6 +25,7 @@ $stmt = $pdo->prepare(
 'INSERT INTO inscriptions (nom, prenom, email, formation_id, statut_paiement,
 
 date_inscription)'
+
 . ' VALUES (?, ?, ?, ?, "en_attente", NOW())'
 );
 // 2. Exécuter avec les vraies valeurs dans l'ordre des ?
