@@ -1,4 +1,7 @@
-
+/* ===============================
+   FormaPro — style.css
+   Purple Professional Theme
+   =============================== */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
@@ -59,7 +62,6 @@ nav {
     align-items: center;
 }
 
-/* Logo — icon + text side by side */
 .logo-link {
     display: flex;
     align-items: center;
@@ -283,36 +285,110 @@ nav ul li a.btn-nav:hover { background: var(--purple-light); color: var(--purple
     color: var(--muted);
     font-size: 15px;
     font-weight: 300;
-    margin-bottom: 44px;
+    margin-bottom: 28px;
 }
+
 
 /* ===== CARDS ===== */
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
 }
 
-.card {
+/* Smooth card styling */
+.cards-grid .card {
     background: white;
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    gap: 12px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.card:hover {
+.cards-grid .card:hover {
     border-color: var(--purple-light);
-    box-shadow: 0 8px 32px rgba(91,63,196,0.12);
-    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(91,63,196,0.15);
+    transform: translateY(-6px);
 }
 
-.card-top { display: flex; justify-content: space-between; align-items: center; }
-.card-icon { font-size: 28px; line-height: 1; }
+/* Filter Animation */
+.cards-grid .card.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Featured card */
+.card-featured {
+    border-color: var(--purple-main);
+    background: linear-gradient(160deg, var(--purple-ghost) 0%, white 60%);
+}
+
+.card-featured::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple-main), var(--purple-light));
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.card-featured-label {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: var(--purple-main);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-featured-label svg { color: #FFD700; }
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Card icon wrappers */
+.card-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-purple { background: #EDE8FC; color: #5B3FC4; }
+.icon-blue   { background: #E8F0FC; color: #2563EB; }
+.icon-orange { background: #FDF0E8; color: #C2550A; }
+.icon-teal   { background: #E8F9F8; color: #0F766E; }
+.icon-green  { background: #E8FAF2; color: #047857; }
+.icon-pink   { background: #FDE8F3; color: #9D174D; }
 
 .badge {
     font-size: 11px;
@@ -330,6 +406,34 @@ nav ul li a.btn-nav:hover { background: var(--purple-light); color: var(--purple
     font-size: 1.15rem;
     font-weight: 400;
     color: var(--ink);
+    margin-bottom: 0;
+}
+
+/* Rating row */
+.card-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+    color: #F59E0B;
+}
+
+.stars svg { flex-shrink: 0; }
+
+.rating-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-2);
+}
+
+.rating-reviews {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 12px;
 }
 
 .card > p {
@@ -340,14 +444,57 @@ nav ul li a.btn-nav:hover { background: var(--purple-light); color: var(--purple
     flex: 1;
 }
 
-.card ul { display: flex; flex-direction: column; gap: 5px; }
-.card ul li { font-size: 13px; color: var(--ink-2); }
+/* Tech tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.card-tag {
+    background: var(--purple-ghost);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--purple-main);
+    padding: 3px 9px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Meta list */
+.card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    list-style: none;
+    margin: 0;
+}
+
+.card-meta li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--ink-2);
+}
+
+.card-meta li svg {
+    color: var(--purple-main);
+    flex-shrink: 0;
+    opacity: 0.8;
+}
 
 .card-btns {
     display: flex;
     gap: 8px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
     margin-top: 4px;
 }
 
@@ -366,6 +513,7 @@ nav ul li a.btn-nav:hover { background: var(--purple-light); color: var(--purple
     border: none;
     cursor: pointer;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    width: 100%;
 }
 .btn:hover { background: var(--purple-deep); transform: translateY(-1px); }
 .btn.btn-sm { padding: 7px 14px; font-size: 12px; }
@@ -385,9 +533,6 @@ nav ul li a.btn-nav:hover { background: var(--purple-light); color: var(--purple
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .btn-outline:hover { border-color: var(--purple-light); background: var(--purple-ghost); }
-
-.card-btns .btn,
-.card-btns .btn-outline { flex: 1; }
 
 .home-all-btn { text-align: center; margin-top: 44px; }
 
@@ -421,6 +566,8 @@ nav ul li a.btn-nav:hover { background: var(--purple-light); color: var(--purple
     font-size: 14px;
     font-weight: 600;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    width: auto;
+    display: inline-block;
 }
 .cta-section .btn:hover { background: var(--purple-pale); }
 

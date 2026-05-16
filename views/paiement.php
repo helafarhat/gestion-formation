@@ -33,11 +33,6 @@ require 'views/partials/header.php';
             </div>
         </div>
 
-        <p class="form-section-title">Confirmation du paiement</p>
-        <p style="font-size:13px; color:#7C6D97; margin-bottom:16px;">
-            Choisissez votre mode de paiement pour finaliser votre inscription.
-        </p>
-
         <div class="paiement-btns">
 
             <form method="POST" action="index.php?page=paiement&id=<?= $inscription['id'] ?>">
