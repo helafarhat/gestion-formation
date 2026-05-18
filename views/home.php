@@ -5,8 +5,8 @@ require 'views/partials/header.php';
 
 <header class="hero">
     <span class="hero-tag">Formations professionnelles certifiantes</span>
-    <h1>Développez vos compétences<br>numériques</h1>
-    <p>Des formations conçues avec des experts de l'industrie pour vous préparer aux métiers du numérique.</p>
+    <h1>Préparez votre avenir <br>numérique</h1>
+    <p>Développez des compétences concrètes grâce à des formations modernes et interactives.</p>
     <div class="hero-actions">
         <a href="index.php?page=formations" class="btn-hero">Voir les formations</a>
         <a href="index.php?page=inscription" class="btn-hero-outline">S'inscrire gratuitement</a>
@@ -80,6 +80,7 @@ require 'views/partials/header.php';
                 </li>
             </ul>
             <div class="card-btns">
+                 <a href="index.php?page=formation_detail&id=1" class="btn-outline">Voir programme</a>
                 <a href="index.php?page=inscription&formation_id=1" class="btn">S'inscrire</a>
             </div>
         </div>
@@ -124,6 +125,7 @@ require 'views/partials/header.php';
                 </li>
             </ul>
             <div class="card-btns">
+                 <a href="index.php?page=formation_detail&id=2" class="btn-outline">Voir programme</a>
                 <a href="index.php?page=inscription&formation_id=2" class="btn">S'inscrire</a>
             </div>
         </div>
@@ -172,6 +174,7 @@ require 'views/partials/header.php';
                 </li>
             </ul>
             <div class="card-btns">
+                 <a href="index.php?page=formation_detail&id=3" class="btn-outline">Voir programme</a>
                 <a href="index.php?page=inscription&formation_id=3" class="btn">S'inscrire</a>
             </div>
         </div>
@@ -216,6 +219,7 @@ require 'views/partials/header.php';
                 </li>
             </ul>
             <div class="card-btns">
+                 <a href="index.php?page=formation_detail&id=4" class="btn-outline">Voir programme</a>
                 <a href="index.php?page=inscription&formation_id=4" class="btn">S'inscrire</a>
             </div>
         </div>
@@ -260,6 +264,7 @@ require 'views/partials/header.php';
                 </li>
             </ul>
             <div class="card-btns">
+                 <a href="index.php?page=formation_detail&id=5" class="btn-outline">Voir programme</a>
                 <a href="index.php?page=inscription&formation_id=5" class="btn">S'inscrire</a>
             </div>
         </div>
@@ -304,6 +309,7 @@ require 'views/partials/header.php';
                 </li>
             </ul>
             <div class="card-btns">
+                 <a href="index.php?page=formation_detail&id=6" class="btn-outline">Voir programme</a>
                 <a href="index.php?page=inscription&formation_id=6" class="btn">S'inscrire</a>
             </div>
         </div>
@@ -317,19 +323,5 @@ require 'views/partials/header.php';
     <a href="index.php?page=inscription" class="btn">S'inscrire maintenant</a>
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.card');
-
-            cards.forEach(card => {
-                if (filter === 'all' || card.dataset.level === filter) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        });
-   
-</script>
 
 <?php require 'views/partials/footer.php'; ?>

@@ -21,21 +21,15 @@ require 'views/partials/header.php';
         <?php else: ?>
             <?php foreach ($formations as $f): ?>
                 <?php
-                    // Emoji par défaut si la colonne n'existe pas en BD
-                    $emoji = $f['emoji'] ?? '📚';
-
-                    // Badge couleur selon le niveau
-                    $niveauClass = '';
                     $niveau = $f['niveau'] ?? '';
+                    $niveauClass = '';
                     if ($niveau === 'Avancé')       $niveauClass = 'avance';
                     elseif ($niveau === 'Débutant') $niveauClass = 'debutant';
                 ?>
                 <div class="card">
                     <div class="card-top">
                         <span class="card-icon"><?= htmlspecialchars($emoji) ?></span>
-                        <span class="badge <?= $niveauClass ?>">
-                            <?= htmlspecialchars($niveau) ?>
-                        </span>
+                        <span class="badge <?= $niveauClass ?>"><?= htmlspecialchars($niveau) ?></span>
                     </div>
                     <h3><?= htmlspecialchars($f['titre']) ?></h3>
                     <p><?= htmlspecialchars($f['description'] ?? '') ?></p>
@@ -50,8 +44,11 @@ require 'views/partials/header.php';
                         <li>📜 Certificat inclus</li>
                     </ul>
                     <div class="card-btns">
+                        <a href="index.php?page=formation_detail&id=<?= $f['id'] ?>" class="btn-outline">
+                            Voir le programme
+                        </a>
                         <a href="index.php?page=inscription&formation_id=<?= $f['id'] ?>" class="btn">
-                            S'inscrire →
+                            S'inscrire
                         </a>
                     </div>
                 </div>

@@ -1,14 +1,10 @@
 <?php
 // index.php — Routeur central (point d'entrée UNIQUE)
-// Toutes les URLs passent par ce fichier via le paramètre GET 'page'.
-
 session_start();
 
-// Lire le paramètre ?page= dans l'URL (défaut : 'home')
 $page = $_GET['page'] ?? 'home';
 
-// ── PROTECTION SESSION ──────────────────────────────────────────────
-// La page 'cours' n'est accessible QUE si le paiement a été validé.
+// Protection session : cours accessible uniquement après paiement
 if ($page === 'cours') {
     if (!isset($_SESSION['paiement_ok']) || $_SESSION['paiement_ok'] !== true) {
         header('Location: index.php');
@@ -16,11 +12,14 @@ if ($page === 'cours') {
     }
 }
 
-// ── ROUTAGE ─────────────────────────────────────────────────────────
 switch ($page) {
 
     case 'formations':
         require 'controllers/FormationController.php';
+        break;
+
+    case 'formation_detail':
+        require 'controllers/FormationDetailController.php';
         break;
 
     case 'inscription':
@@ -40,7 +39,6 @@ switch ($page) {
         break;
 
     default:
-        // Toute URL inconnue affiche la page d'accueil
         require 'views/home.php';
         break;
 }

@@ -958,3 +958,17 @@ footer {
     padding: 8px 18px;
     font-size: 13px;
 }
+.card-btns {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.card-btns .btn,
+.card-btns .btn-outline {
+    flex: 1;
+    width: auto;        /* overrides the global width:100% on .btn */
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 13px;
+}
