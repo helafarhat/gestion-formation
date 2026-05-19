@@ -1,6 +1,5 @@
 /* ===============================
    FormaPro — style.css
-   Purple Professional Theme
    =============================== */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
@@ -967,7 +966,7 @@ footer {
 .card-btns .btn,
 .card-btns .btn-outline {
     flex: 1;
-    width: auto;        /* overrides the global width:100% on .btn */
+    width: auto;     
     text-align: center;
     padding: 10px 14px;
     font-size: 13px;
